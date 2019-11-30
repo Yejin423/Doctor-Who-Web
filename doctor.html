@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Doctor</title>
+        <link href="doctor.css" rel="stylesheet" type="text/css">
+        <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+        <script type="text/javascript">
+        $(function(){
+$('.mov').click(function(){  
+var ss = $(this).attr("href");
+$('html, body').animate({scrollTop:ss});
+return false;
+})
+})
+        </script>
+        <script type="text/javascript">
+    var stmnLEFT = 10; // 오른쪽 여백 
+    var stmnGAP1 = 0; // 위쪽 여백 
+    var stmnGAP2 = 200; // 스크롤시 브라우저 위쪽과 떨어지는 거리 
+    var stmnBASE = 200; // 스크롤 시작위치 
+    var stmnActivateSpeed = 20; //스크롤을 인식하는 딜레이 (숫자가 클수록 느리게 인식)
+    var stmnScrollSpeed = 10; //스크롤 속도 (클수록 느림)
+    var stmnTimer; 
+    
+    function RefreshStaticMenu() { 
+     var stmnStartPoint, stmnEndPoint; 
+     stmnStartPoint = parseInt(document.getElementById('SIDEMENU').style.top, 10); 
+     stmnEndPoint = Math.max(document.documentElement.scrollTop, document.body.scrollTop) + stmnGAP2; 
+     if (stmnEndPoint < stmnGAP1) stmnEndPoint = stmnGAP1; 
+     if (stmnStartPoint != stmnEndPoint) { 
+      stmnScrollAmount = Math.ceil( Math.abs( stmnEndPoint - stmnStartPoint ) / 15 ); 
+      document.getElementById('SIDEMENU').style.top = parseInt(document.getElementById('SIDEMENU').style.top, 10) + ( ( stmnEndPoint<stmnStartPoint ) ? -stmnScrollAmount : stmnScrollAmount ) + 'px'; 
+      stmnRefreshTimer = stmnScrollSpeed; 
+      }
+     stmnTimer = setTimeout("RefreshStaticMenu();", stmnActivateSpeed); 
+     } 
+    function InitializeStaticMenu() {
+     document.getElementById('SIDEMENU').style.right = stmnLEFT + 'px';  //처음에 오른쪽에 위치. 
+     document.getElementById('SIDEMENU').style.top = document.body.scrollTop + stmnBASE + 'px'; 
+     RefreshStaticMenu();
+     }
+        </script>
+    </head>
+    <body onload="InitializeStaticMenu();">
+        <div id=SIDEMENU>
+                <a href=index.html ><img src=img/tardis3.png></a>
+            </div>
+        <div id=wrap>
+            <div id=header>
+                <div id=logo>
+                        <img src=img/doctorlogo.png>
+                </div>
+                
+                <div id=menu>
+                    <ul>
+                            <a href=0 class=mov> <li>Intro</li></a>
+                            <a href=165 class=mov> <li>9th</li></a>
+                            <a href=620 class=mov> <li>10th</li></a>
+                            <a href=1080 class=mov> <li>11th</li></a>
+                            <a href=1540 class=mov> <li>12th</li></a>
+                            <a href=2000 class=mov> <li>13th</li></a>
+                    </ul>
+                </div>
+            </div>
+            <div id=con>
+                    The Doctor is the title character in the long-running BBC science fiction television programme Doctor Who.
+                    ince the show's inception in 1963, the character has been portrayed by thirteen lead actors.
+                    In the programme, "the Doctor" is the alias assumed by a centuries-old alien 
+                    – a Time Lord from the planet Gallifrey – who travels through space and time in the TARDIS, 
+                    frequently with companions. The transition to each succeeding actor is explained 
+                    within the show's narrative through the plot device of "regeneration", 
+                    a biological function of the Time Lord race that allows a change of cellular structure 
+                    and appearance with recovery following a potentially fatal injury.
+            </div>
+            <div id=doc9>
+                <div class=por>
+                        <a href=https://en.wikipedia.org/wiki/Ninth_Doctor><img src=img/doc9.jpg height="400"></a>
+                </div>
+                <div class=intro>
+                       <div class=name>Ninth Doctor(Portrayed by Christopher Eccleston)</div> 
+                       <ul>
+                                  <li>speaks with a distinct Northern accent.</li>
+                                  <li>simply a black leather reefer jacket and dark trousers</li>
+                                  <li>"brutal at times" and "confrontational" and "inflexible"</li>
+                                  <li>traveling with Rose Tyler</li>
+                                  
+                       </ul>
+                       <div class=pic>
+                               <br>
+                               
+                               <div class=con> <img src=img/nine2.jpg_small height=100></div>
+                               <div class=con><img src=img/eclrose.jpg  height=100></div>
+                                <div class=con><img src=img/eclrose2.gif height=100></div>
+                                <div class=con><img src=img/nine1.jpg_medium height=100></div>
+                                <div class=con><img src=img/nine9.jpg height=100></div>
+                                <br>
+                                <div class=con><img src=img/nine5.gif height=100></div>
+                                <div class=con><img src=img/nine3.jpg height=100></div>
+                                <div class=con><img src=img/nine4.jpg height=100></div>
+                                <div class=con><img src=img/nine7.jpg height=100></div>
+
+                                
+                        </div>
+                       
+                </div>
+                   
+
+            </div>
+            <div id=doc10>
+                    <div class=por>
+                            <a href=https://en.wikipedia.org/wiki/Tenth_Doctor><img src=img/doc10.jpg height="400"></a>
+                        </div>
+                        <div class=intro>
+                                 <p class=name>Tenth Doctor(Portrayed by David Tennant)</p>
+                                 <ul>
+                                         <li>Speaks with an Estuary English accent</li>
+                                         <li>Not "ginger", but slim and a little bit foxy</li>
+                                         <li>Generally wears a light brown faux-suede duster coat</li>
+                                         <li>Traveling with Rose-Matha-Donna</li>
+                                 </ul>
+                                 <div class=pic>
+                                                <br>
+                                                
+                                        <div class=con><img src=img/ten01.jpg height=100></div>
+                                        <div class=con><img src=img/ten02.jpg height=100></div>
+                                        <div class=con><img src=img/ten19.gif height=100></div>
+                                        <div class=con><img src=img/ten17.jpg height=100></div>
+                                        <div class=con><img src=img/ten09.jpg height=100></div>
+                                         <br>
+                                        <div class=con><img src=img/ten23.gif height=100></div>
+                                        <div class=con><img src=img/ten14.jpg height=100></div>
+                                        <div class=con><img src=img/ten16.jpg height=100></div>
+                                        <div class=con><img src=img/ten25.gif height=100></div>
+                 
+                                                 
+                                 </div>
+                        </div>
+            </div>
+            <div id=doc11>
+                    <div class=por>
+                            <a href=https://en.wikipedia.org/wiki/Eleventh_Doctor><img src=img/doc11.jpg height="400"></a>
+                        </div>
+                        <div class=intro>
+                                        <p class=name>Eleventh Doctor(Portrayed by Matt Smith)</p>
+                                        <ul>
+                                                 <li>Tweed jacket, Bow ties and Fez</li>
+                                                 <li>Dislikes: Apples, Bacon, Baked beans, Carrots, Wine, Yoghurt </li>
+                                                 
+                                                <li>Companion: Amy, Rory, Clara</li>
+                                                <br>
+                                        </ul>
+                                        <div class=pic>
+                                                        <br>
+                                                        
+                                                <div class=con><img src=img/ele01.jpg height=100></div>
+                                                <div class=con><img src=img/ele04.gif  height=100></div>
+                                                <div class=con><img src=img/ele11.gif height=100></div>
+                                                <div class=con><img src=img/ele20.jpg height=100></div>
+                                                <div class=con><img src=img/ele13.jpg height=100></div>
+                                                <div class=con><img src=img/spaceshort.jpg height=100></div>
+                                                 <br>
+                                                <div class=con><img src=img/ele14.jpg height=100></div>
+                                                <div class=con><img src=img/ele18.jpg height=100></div>
+                                                <div class=con><img src=img/ele03.jpg height=100></div>
+                                                <div class=con><img src=img/ele19.gif height=100></div>
+                                                <div class=con><img src=img/ele12.gif height=100></div>
+                         
+                                                         
+                                         </div>
+                                
+                        </div>
+            </div>
+            <div id=doc12>
+                    <div class=por>
+                            <a href=https://en.wikipedia.org/wiki/Twelfth_Doctor><img src=img/doc12.jfif height="400"></a>
+                        </div>
+                        <div class=intro>
+                                        <p class=name>Twelfth Doctor(Portrayed by Peter Capaldi)</p>
+                                        <ul>    
+                                                        <li>Dark blue short Crombie-style coat with a red lining</li>
+                                                        <li>An old man with curly hair</li>
+                                                        <li>Rock star: playng electric guitar </li>
+                                                        <li>Companion: Clara, Missy</li>
+                                                </ul>
+                                        <div class=pic>
+                                                                <br>
+                                                                
+                                                        <div class=con><img src=img/spaceshort2.jpg height=100></div>
+                                                        <div class=con><img src=img/twel15.jpg height=100></div>
+                                                        <div class=con><img src=img/twel03.jpg height=100></div>
+                                                        <div class=con><img src=img/twel27.jpg  height=100></div>
+                                                        <div class=con><img src=img/twel18.jpg height=100></div>
+                                                        <div class=con><img src=img/twel35.gif height=100></div>
+                                                         <br>
+                                                         <div class=con><img src=img/twel28.jpg height=100></div>
+                                                         <div class=con><img src=img/twel34.jpg height=100></div>
+                                                        <div class=con><img src=img/twel05.jpg height=100></div>
+                                                        <div class=con><img src=img/twel38.jpg height=100></div>
+                                                        <div class=con><img src=img/twel31.jpg height=100></div>
+                                                        <div class=con><img src=img/twel11.jpg height=100></div>
+                                                        
+                                 
+                                                                 
+                                        </div>
+                                
+                        </div>
+            </div>
+            <div id=doc13>
+                    <div class=por>
+                            <a href=https://en.wikipedia.org/wiki/Thirteenth_Doctor><img src=img/doc13.jpg height="400"></a>
+                        </div>
+                        <div class=intro>
+                                        <p class=name>Thirteenth Doctor(Portrayed by Jodie Whittaker)</p>
+                                        <ul>
+                                                <li>The first Female Doctor</li>
+                                                <li>Incredibly lively, warm, funny, energetic, inclusive</li>
+                                                <li>Blue high-waisted culottes with yellow braces</li>
+                                                <li>Companion: Graham, Ryan, Yaz
+                                        </ul>
+                                        
+                                        <div class=pic>
+                                                <br>
+                                                        
+                                                <div class=con><img src=img/thr08.gif height=100></div>
+                                                <div class=con><img src=img/thr13.jpg height=100></div>
+                                                <div class=con><img src=img/thr11.jpg height=100></div>
+                                                <div class=con><img src=img/thr17.gif height=100></div>
+                                                <div class=con><img src=img/thr07.jpg height=100></div>
+                                                 <br>
+                                                <div class=con><img src=img/thr26.jpg height=100></div>
+                                                <div class=con><img src=img/thr23.jpg height=100></div>
+                                                <div class=con><img src=img/thr21.gif height=100></div>
+                                                <div class=con><img src=img/thr28.gif height=100></div>
+                         
+                                                         
+                                         </div>
+                                
+                        </div>
+            </div>
+            <a href=https://en.wikipedia.org/wiki/The_Doctor_(Doctor_Who)><div id=alldoctors>
+                    <img src=img/doctors2.jpg height=200px>
+                    <img src=img/doctors.png height=200px>
+                    <img src=img/doctors3.jpg height=200px>
+            </div></a>
+
+        </div>
+    </body>
+</html>

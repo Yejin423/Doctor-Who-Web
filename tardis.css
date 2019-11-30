@@ -1,0 +1,109 @@
+body{
+    margin:0;
+    background-image: url(img/tranblue.png);
+}
+#wrap{
+    background-color: rgb(30, 37, 61);
+    width:85%;
+    text-align: center;
+    
+    overflow: hidden;
+    margin:0 auto;
+}
+#header{
+    margin-top:0 ;
+    background-image: url(img/spacetran.png); 
+    width:100%;
+    height: 130px;
+    position:fixed;
+    text-align: center;
+   overflow: hidden;
+    
+}
+#logo{
+    width:120px;
+    float:left;   
+}
+
+#SIDEMENU{
+    margin:0;
+    padding:0;
+    position:absolute;
+    right:0px;
+    top:0px;
+
+}
+@import url('https://fonts.googleapis.com/css?family=Playball&display=swap');
+@font-face{
+    font-family:'Playball', cursive;
+    src:url('font/Playball-Regular.ttf');
+}
+#intro{
+    margin-top:150px;
+    font-family: 'Playball', cursive; 
+    font-size:30px;
+    color:rgba(255, 217, 122, 0.815);
+}
+#intro2{
+    color:white;
+    margin:10px;
+}
+#menu{
+    float:right;
+    margin-top:80px;
+    margin-right:50px;
+}
+#menu li{
+    display: inline;
+    margin:0 10px 0 10px ;
+}
+#menu a{
+    color:rgba(255, 194, 80, 0.842);
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#menu a:hover{
+    color:white;
+}
+.gulsi{
+    margin-top:80px;
+    color:white;
+    font-size: 30px;
+    font-family: 'Playball','cursive';
+    background-color: rgba(38, 34, 90, 0.658);
+    
+}
+#pic{
+    
+    margin-left:10px;
+    margin-right: 10px;
+}
+#goods{
+    clear:both;
+    margin-top:50px;
+    margin-left:10px;
+    margin-right: 10px;
+
+}
+.goods{
+    margin-top:80px;
+    color:white;
+    font-size: 30px;
+    font-family: 'Playball','cursive';
+    background-color: rgba(38, 34, 90, 0.658); 
+}
+.con{  
+    float:left;
+    margin:8px;
+}
+
+#goods a{
+    color:goldenrod;
+    font-size: 30px;
+    text-decoration: none;
+}
+#goods a:hover{
+    color:white;
+    font-size: 30px;
+    text-decoration: none;
+}

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Meme</title>
+        <link href="meme.css" rel="stylesheet" type="text/css">
+        <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+        <script type="text/javascript">
+        $(function(){
+$('.mov').click(function(){  
+var ss = $(this).attr("href");
+$('html, body').animate({scrollTop:ss});
+return false;
+})
+})
+        </script>
+        <script type="text/javascript">
+    var stmnLEFT = 10; // 오른쪽 여백 
+    var stmnGAP1 = 0; // 위쪽 여백 
+    var stmnGAP2 = 200; // 스크롤시 브라우저 위쪽과 떨어지는 거리 
+    var stmnBASE = 200; // 스크롤 시작위치 
+    var stmnActivateSpeed = 20; //스크롤을 인식하는 딜레이 (숫자가 클수록 느리게 인식)
+    var stmnScrollSpeed = 10; //스크롤 속도 (클수록 느림)
+    var stmnTimer; 
+    
+    function RefreshStaticMenu() { 
+     var stmnStartPoint, stmnEndPoint; 
+     stmnStartPoint = parseInt(document.getElementById('SIDEMENU').style.top, 10); 
+     stmnEndPoint = Math.max(document.documentElement.scrollTop, document.body.scrollTop) + stmnGAP2; 
+     if (stmnEndPoint < stmnGAP1) stmnEndPoint = stmnGAP1; 
+     if (stmnStartPoint != stmnEndPoint) { 
+      stmnScrollAmount = Math.ceil( Math.abs( stmnEndPoint - stmnStartPoint ) / 15 ); 
+      document.getElementById('SIDEMENU').style.top = parseInt(document.getElementById('SIDEMENU').style.top, 10) + ( ( stmnEndPoint<stmnStartPoint ) ? -stmnScrollAmount : stmnScrollAmount ) + 'px'; 
+      stmnRefreshTimer = stmnScrollSpeed; 
+      }
+     stmnTimer = setTimeout("RefreshStaticMenu();", stmnActivateSpeed); 
+     } 
+    function InitializeStaticMenu() {
+     document.getElementById('SIDEMENU').style.right = stmnLEFT + 'px';  //처음에 오른쪽에 위치. 
+     document.getElementById('SIDEMENU').style.top = document.body.scrollTop + stmnBASE + 'px'; 
+     RefreshStaticMenu();
+     }
+        </script>
+  </head>
+  <body onload="InitializeStaticMenu();">
+        <div id=SIDEMENU>
+                <a href=index.html ><img src=img/tardis3.png></a>
+            </div>
+        <div id=header>
+            <div id=logo>
+                    <img src='img/memelogo.png'>
+            </div>
+                    
+        </div>
+        <div id=wrap>
+            <div id=meme>
+                <div class=con><img src='img/meme.jpeg' height=300px></div>
+                <div class=con><img src='img/meme01.jpg' height=300px></div>
+                <div class=con><img src='img/meme02.jpg' height=300px></div>
+                <div class=con><img src='img/meme03.png' height=300px></div>
+
+                <div class=con><img src='img/meme04.png' height=340px></div>
+                <div class=con><img src='img/meme05.png' height=340px></div>
+                <div class=con><img src='img/meme06.jpg' height=340px></div>
+                <div class=con><img src='img/meme07.jpg' height=340px></div>
+
+                <div class=con><img src='img/meme08.jpg' height=300px></div>
+                <div class=con><img src='img/meme09.jpeg' height=300px></div>
+                <div class=con><img src='img/meme10.gif' height=300px></div>
+                <div class=con><img src='img/meme14.jpg' height=300px></div>
+
+                <div class=con><img src='img/meme11.jpg' height=320px></div>
+                <div class=con><img src='img/meme12.jpg' height=320px></div>
+                <div class=con><img src='img/meme13.jpg' height=320px></div>
+
+                <div class=con><img src='img/meme20.jpg' height=340px></div>
+                <div class=con><img src='img/meme15.jpg' height=340px></div>
+
+                <div class=con><img src='img/meme22.jpg' height=300px></div>
+                <div class=con><img src='img/meme16.jpg' height=300px></div>
+                <div class=con><img src='img/meme21.gif' height=300px></div>
+
+                <div class=con><img src='img/meme17.jpg' height=285px></div>
+                <div class=con><img src='img/meme19.jpg' height=285px></div>
+
+                <div class=con><img src='img/meme18.jpg' height=210px></div>
+                <div class=con><img src='img/meme25.jpg' height=210px></div>
+                <div class=con><img src='img/meme38.jpg' height=210px></div>
+                <div class=con><img src='img/meme41.jpg' height=210px></div>
+                
+                
+                
+                <div class=con><img src='img/meme23.gif' height=300px></div>
+                <div class=con><img src='img/meme31.jpg' height=300px></div>
+                <div class=con><img src='img/meme33.jpg' height=300px></div>
+                <div class=con><img src='img/meme24.jpg' height=300px></div>
+                
+                <div class=con><img src='img/meme26.jpg' height=300px></div>
+                <div class=con><img src='img/meme27.gif' height=300px></div>
+                <div class=con><img src='img/meme37.jpg' height=300px></div>
+
+                <div class=con><img src='img/meme28.jpg' height=280px></div>
+                <div class=con><img src='img/meme29.jpg' height=280px></div>
+                <div class=con><img src='img/meme36.jpg' height=280px></div>
+
+                <div class=con><img src='img/meme30.jpg' height=300px></div>
+                <div class=con><img src='img/meme32.jpg' height=300px></div>
+
+                <div class=con><img src='img/meme39.jpg' height=300px></div>
+
+                <div class=con><img src='img/meme34.jpg' height=270px></div>
+                <div class=con><img src='img/meme35.jpg' height=270px></div>
+                <div class=con><img src='img/meme42.gif' height=270px></div>
+                
+            </div>
+            
+        </div>
+
+  </body>
+</html>

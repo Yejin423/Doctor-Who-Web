@@ -1,0 +1,46 @@
+body{
+    margin:0;
+    background-image: url(img/tranblue.png);
+}
+#wrap{
+    
+    width:100%;
+    overflow: hidden;
+    
+}
+#header{
+    margin-top:0 ;
+    background-image: url(img/spacetran.png); 
+    width:100%;
+    height: 150px ;
+    position:fixed;
+    text-align: center;
+   overflow: hidden;
+    
+}
+#logo{
+    width:150px;
+    float:left;   
+}
+#SIDEMENU{
+    margin:0;
+    padding:0;
+    position:absolute;
+    right:0px;
+    top:0px;
+
+}
+.con{
+    float:left;
+    padding:5px;
+    
+}
+#meme{
+    margin:150px 50px 0px 50px;
+    padding:5px 5px 0px 5px;
+    
+    width:85%;
+    background-color: rgb(255, 221, 126);
+    overflow: hidden;
+    text-align: center;
+}

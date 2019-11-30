@@ -1,0 +1,53 @@
+body{
+    
+    background-image: url(img/space.jpg);
+}
+#wrap{
+    
+    padding-top:100px;
+    width:100%;
+    
+    margin:0 auto;
+    overflow: hidden;
+    text-align: center;
+}
+#header{
+    position:fixed;
+    color:white;
+    text-align: center;
+    background-image: url(img/spacetran.png); 
+    width:100%;
+    height: 150px;
+    overflow: hidden;
+}
+#sub{
+    color:white;
+}
+@import url('https://fonts.googleapis.com/css?family=Ibarra+Real+Nova&display=swap');
+.aaa{font-family: 'Ibarra Real Nova', serif;
+font-size: 50px; text-align: center;}
+
+a{
+    text-decoration: none;
+    color:white;
+}
+a:hover{
+    color:gold;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Playball&display=swap');
+@font-face{
+    font-family:'Playball', cursive;
+    src:url('font/Playball-Regular.ttf');
+}
+#trailer{
+    font-family:'Playball', cursive;
+    margin-top:80px;
+    color:white;
+    font-size: 30px;
+    
+    background-color: rgba(38, 34, 90, 0.658);
+}
+
+
+ 

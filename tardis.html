@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Tardis</title>
+        
+        <link href="tardis.css" rel="stylesheet" type="text/css">
+        <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+        <script type="text/javascript">
+        $(function(){
+$('.mov').click(function(){  
+var ss = $(this).attr("href");
+$('html, body').animate({scrollTop:ss});
+return false;
+})
+})
+        </script>
+        <script type="text/javascript">
+    var stmnLEFT = 10; // 오른쪽 여백 
+    var stmnGAP1 = 0; // 위쪽 여백 
+    var stmnGAP2 = 200; // 스크롤시 브라우저 위쪽과 떨어지는 거리 
+    var stmnBASE = 200; // 스크롤 시작위치 
+    var stmnActivateSpeed = 20; //스크롤을 인식하는 딜레이 (숫자가 클수록 느리게 인식)
+    var stmnScrollSpeed = 10; //스크롤 속도 (클수록 느림)
+    var stmnTimer; 
+    
+    function RefreshStaticMenu() { 
+     var stmnStartPoint, stmnEndPoint; 
+     stmnStartPoint = parseInt(document.getElementById('SIDEMENU').style.top, 10); 
+     stmnEndPoint = Math.max(document.documentElement.scrollTop, document.body.scrollTop) + stmnGAP2; 
+     if (stmnEndPoint < stmnGAP1) stmnEndPoint = stmnGAP1; 
+     if (stmnStartPoint != stmnEndPoint) { 
+      stmnScrollAmount = Math.ceil( Math.abs( stmnEndPoint - stmnStartPoint ) / 15 ); 
+      document.getElementById('SIDEMENU').style.top = parseInt(document.getElementById('SIDEMENU').style.top, 10) + ( ( stmnEndPoint<stmnStartPoint ) ? -stmnScrollAmount : stmnScrollAmount ) + 'px'; 
+      stmnRefreshTimer = stmnScrollSpeed; 
+      }
+     stmnTimer = setTimeout("RefreshStaticMenu();", stmnActivateSpeed); 
+     } 
+    function InitializeStaticMenu() {
+     document.getElementById('SIDEMENU').style.right = stmnLEFT + 'px';  //처음에 오른쪽에 위치. 
+     document.getElementById('SIDEMENU').style.top = document.body.scrollTop + stmnBASE + 'px'; 
+     RefreshStaticMenu();
+     }
+        </script>
+    </head>
+    <body onload="InitializeStaticMenu();">
+            <div id=SIDEMENU>
+                    <a href=index.html ><img src=img/tardis3_1.png></a>
+            </div>
+            <div id=header>
+                    <div id=logo>
+                            <img src=img/tardislogo2.png>
+                    </div>
+                    <div id=menu>
+                            <ul>
+                                <a href=0 class=mov><li>Tardis</li></a>
+                                <a href=2550 class=mov><li>Goods</li></a>
+                               
+                            </ul>
+                    </div>
+                </div>
+            <div id=wrap>
+                
+                <div id=intro>
+                        TARDIS: Time And Relative Dimension In Space
+                </div>
+                <div id=intro2>
+                        A fictional time machine and spacecraft that appears in the British science fiction 
+                        television series Doctor Who and its various spin-offs.
+
+                        The TV show Doctor Who mainly features a single TARDIS used by the central character the Doctor. 
+                        However, in the series other TARDISes are sometimes seen or used. 
+                        The Doctor's TARDIS has a number of features peculiar to it, notably due to its age and personality. 
+                        While other TARDISes have the ability to change their appearance in order to blend in with their surroundings, 
+                        the chameleon circuit in the Doctor's TARDIS is broken, and it always resembles a police box. However, 
+                        in the new series (since 2005), a perception filter is used to make the TARDIS blend in with the surroundings, 
+                        so that it is often ignored by passersby. While the exterior is of limited size, the TARDIS is much bigger on 
+                        the inside, containing an infinite number of rooms, corridors and storage spaces.
+                        <br><br>
+                        <img src=img/13tardis.png height=200px>
+                      
+                </div>
+                <div class=vid>
+                    <p class=gulsi>TARDIS engine sound</p> <br>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/VPzp0U1DQGM" 
+                        frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; 
+                        picture-in-picture" allowfullscreen></iframe>
+                </div>
+
+                <div id=pic>
+                    <p class=gulsi>It's bigger than outside!</p> <br>
+                    <p><img src=img/tardis13_2.png width=90% margin=0 auto></p><br>
+                    <div class=con><img src=img/tardis10.jpg height=200px></div>
+                    <div class=con><img src=img/tardis19.jpg height=200px></div>
+                    <div class=con><img src=img/tardis5.jpg height=200px></div>
+                    <div class=con><img src=img/tardis15.png height=200px></div>
+                    <div class=con><img src=img/tardis25.jpg height=200px></div>
+                    <div class=con><img src=img/tardis12.jpg height=200px></div>
+                    <div class=con><img src=img/tardis4.jpg height=200px></div>
+                    <div class=con><img src=img/tardis21.jpg height=200px></div>
+                    <div class=con><img src=img/tardis8.jpg height=200px></div>
+                    <div class=con><img src=img/tardis23.jpg height=200px></div>
+                    <div class=con><img src=img/tardis14.jpg height=200px></div>
+                    <div class=con><img src=img/tardisintro.jpg height=200px></div>
+                    <div class=con><img src=img/tardis28.jpg height=200px></div>
+                    <div class=con><img src=img/tardises.jpg height=200px></div>
+                    <div class=con><img src=img/tardis16.gif height=200px></div>
+                    <div class=con><img src=img/tardis9.png height=200px></div>
+                </div>
+               
+                <div id=goods>
+                    <p class=goods>Doctor Who unique products</p>
+                    <div class=con><img src=img/tardisbag.jfif height=200px></div>
+                    <div class=con><img src=img/tardisbag2.jfif height=200px></div>
+                    <div class=con><img src=img/tardisbag3.jfif height=200px></div>
+                    <div class=con><img src=img/tardiscup.jfif height=200px></div>
+                    <div class=con><img src=img/tardispants.jfif height=200px></div>
+                    <div class=con><img src=img/tardiscap.jfif height=200px></div>
+                    
+                    <div class=con><img src=img/tencoat.jpg height=200px></div>
+                    <div class=con><img src=img/13coat.jpg height=200px></div>
+                    <div class=con><img src=img/tardisbag4.jpg height=200px></div>
+                    <div class=con><img src=img/tardispurse.jpg height=200px></div>
+                    <div class=con><img src=img/tardisbag5.jpg height=200px></div>
+                    <div class=con><img src=img/tardisbag6.jpg height=200px></div>
+                    <div class=con><img src=img/tardisbag7.jpg height=200px></div>
+                    <div class=con><img src=img/tardiswatch.jfif height=200px></div>
+                    <a href=https://www.thewhoshop.com>More Products>></a>
+                    
+                </div>
+               
+
+            </div>
+    </body>
+</html>

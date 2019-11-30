@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Series</title>
+        <meta charset="utf-8">
+        <link href="series.css" rel="stylesheet" type="text/css">
+        <script type="text/javascript">
+            $(function(){
+            $('.mov').click(function(){  
+    var ss = $(this).attr("href");
+    $('html, body').animate({scrollTop:ss});
+    return false;
+    })
+    })
+        </script>
+        <script type="text/javascript">
+        var stmnLEFT = 10; // 오른쪽 여백 
+        var stmnGAP1 = 0; // 위쪽 여백 
+        var stmnGAP2 = 400; // 스크롤시 브라우저 위쪽과 떨어지는 거리 
+        var stmnBASE = 400; // 스크롤 시작위치 
+        var stmnActivateSpeed = 2; //스크롤을 인식하는 딜레이 (숫자가 클수록 느리게 인식)
+        var stmnScrollSpeed = 5; //스크롤 속도 (클수록 느림)
+        var stmnTimer; 
+        
+        function RefreshStaticMenu() { 
+         var stmnStartPoint, stmnEndPoint; 
+         stmnStartPoint = parseInt(document.getElementById('SIDEMENU').style.top, 10); 
+         stmnEndPoint = Math.max(document.documentElement.scrollTop, document.body.scrollTop) + stmnGAP2; 
+         if (stmnEndPoint < stmnGAP1) stmnEndPoint = stmnGAP1; 
+         if (stmnStartPoint != stmnEndPoint) { 
+          stmnScrollAmount = Math.ceil( Math.abs( stmnEndPoint - stmnStartPoint ) / 15 ); 
+          document.getElementById('SIDEMENU').style.top = parseInt(document.getElementById('SIDEMENU').style.top, 10) + ( ( stmnEndPoint<stmnStartPoint ) ? -stmnScrollAmount : stmnScrollAmount ) + 'px'; 
+          stmnRefreshTimer = stmnScrollSpeed; 
+          }
+         stmnTimer = setTimeout("RefreshStaticMenu();", stmnActivateSpeed); 
+         } 
+        function InitializeStaticMenu() {
+         document.getElementById('SIDEMENU').style.right = stmnLEFT + 'px';  //처음에 오른쪽에 위치. 
+         document.getElementById('SIDEMENU').style.top = document.body.scrollTop + stmnBASE + 'px'; 
+         RefreshStaticMenu();
+         }
+       </script>
+    </head>
+    <body>
+        <div id=header>
+            
+           <a href=index.html><img src=img/serieslogo.png></a> 
+           <iframe src="mp3/opening.mp3" allow="autoplay" style="display:none" id="iframeAudio" control>
+           </iframe> 
+        </div> 
+        
+        <div id=wrap>
+            <div id=sub>
+                    <p class=a>Doctor Who Old Season(1963~)</p>
+                    <p class=b>Doctor Who New Season(2005~)</p>
+                    <p class=intro>Doctor Who is a British science fiction television 
+                        programme produced by the BBC since 1963. The programme 
+                        depicts the adventures of a Time Lord called "the Doctor",
+                         an extraterrestrial being, to all appearances human, from the planet Gallifrey. 
+                         The Doctor explores the universe in a time-travelling space ship called the TARDIS. 
+                         Its exterior appears as a blue British police box, which was a common sight in Britain 
+                         in 1963 when the series first aired. Accompanied by a number of companions, 
+                         the Doctor combats a variety of foes while working to save civilisations and help people in need.</p>
+            </div>
+            <div id=season>
+                
+               <a href=><img src=img/old.jpg width=500px></a><br>
+               <a href='https://series.naver.com/broadcasting/detail.nhn?productNo=1361660'><img src=img/s1_2.jpg width=200px height=300px></a>
+               <a href='https://series.naver.com/broadcasting/detail.nhn?productNo=1361661'><img src=img/s2.jpg width=200px height=300px></a>
+               <a href='https://series.naver.com/broadcasting/detail.nhn?productNo=1364998'><img src=img/s3.jpg width=200px height=300px></a>
+               <a href='https://series.naver.com/broadcasting/detail.nhn?productNo=1364999'><img src=img/s4.jpg width=200px height=300px></a>
+               <a href='https://series.naver.com/broadcasting/detail.nhn?productNo=1365048'><img src=img/s5.jpg width=200px height=300px></a>
+               <a href='https://series.naver.com/broadcasting/detail.nhn?productNo=1365049'><img src=img/s6.webp width=200px height=300px></a>
+               <a href='https://series.naver.com/broadcasting/detail.nhn?productNo=1626604'><img src=img/s7.jpg width=200px height=300px></a>
+               <a href='https://series.naver.com/broadcasting/detail.nhn?productNo=1822339'><img src=img/s8.jpg width=200px height=300px></a>
+               <a href=><img src=img/s9.jpg width=200px height=300px></a>
+               <a href=><img src=img/s10.jpg width=200px height=300px></a>
+               <a href=><img src=img/13th.jpg width=200px height=300px></a>
+               <a href=><img src=img/s13.jfif width=200px height=300px></a>
+            
+                
+            </div>
+            <div id=trailer>
+               2020 New Seoson: Seoson 12 Trailer
+            </div>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/vkEB0ysv7sM" 
+            frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen></iframe>
+
+        </div>
+    </body>
+</html>
